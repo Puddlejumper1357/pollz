@@ -53,7 +53,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'pollz.urls'
+ROOT_URLCONF = 'pollz-project.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pollz.wsgi.application'
+WSGI_APPLICATION = 'pollz-project.wsgi.application'
 
 
 # Database

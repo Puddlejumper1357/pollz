@@ -12,3 +12,17 @@ h1{
     font-weight: Bolder;
 
 }
+body{
+    background: yellow url("images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+ul {
+        color: green;
+}
+
+label {
+    color: green;
+}

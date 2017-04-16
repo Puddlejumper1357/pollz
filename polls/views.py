@@ -20,9 +20,13 @@ def detail(request, question_id):#404 error
 #def detail(request, question_id):#primary key number
    # return HttpResponse("You're looking at question %s." % question_id)#will print question ID
 
+#def results(request, question_id):
+ #   response = "You're looking at the results of question %s."
+  #  return HttpResponse(response % question_id)
+    
 def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+    question = get_object_or_404(Question, pk=question_id)
+    return render(request, 'polls/results.html', {'question': question})
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -40,4 +44,5 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
+
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
